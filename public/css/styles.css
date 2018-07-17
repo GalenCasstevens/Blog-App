@@ -1,11 +1,23 @@
+body {
+    background-color: #ff1a1a;
+}
 i.icon {
     font-size: 1.5em;
 }
 img {
     width: 200px; 
 }
+div.ui.inverted.segment {
+   width: 70%;
+   margin: 0 auto;
+   margin-top: 5em;
+}
+div.ui.main.text.container.segment {
+    background-color: #1b1c1d;
+    /*color: #FFF;*/
+}
 #indexTitle {
-    margin-top: 3em;
+    /*margin-top: 300px;*/
 }
 .container.main {
     margin-top: 7.0em;

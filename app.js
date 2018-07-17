@@ -50,6 +50,28 @@ app.post("/blogs", function(req, res) {
     });
 });
 
+// show route
+app.get("/blogs/:id", function(req, res) {
+    Blog.findById(req.params.id, function(err, foundBlog) {
+        if(err) {
+            res.redirect("/blogs");
+        } else {
+            res.render("show", {blog: foundBlog});
+        }
+    });
+});
+
+// edit and update route
+app.get("/blogs/:id/edit", function(req, res) {
+    Blog.findById(req.params.id, function(err, foundBlog) {
+       if(err) {
+           res.redirect("/blogs")
+       } else {
+           res.render("edit", {blog: foundBlog});
+       }
+    });
+});
+
 app.listen(process.env.PORT, process.env.IP, function() {
     console.log("Server starting...");
 });
